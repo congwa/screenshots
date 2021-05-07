@@ -105,11 +105,13 @@ export default class ScreenshotsViewer extends PureComponent {
     this.draw()
     window.addEventListener('mousemove', this.onMousemove)
     window.addEventListener('mouseup', this.onMouseup)
+    window.addEventListener('keyup', this.onKeyup)
   }
 
   componentWillUnmount () {
     window.removeEventListener('mousemove', this.onMousemove)
     window.removeEventListener('mouseup', this.onMouseup)
+    window.removeEventListener('keyup', this.onKeyup)
   }
 
   componentDidUpdate () {
@@ -128,6 +130,25 @@ export default class ScreenshotsViewer extends PureComponent {
     this.ctx.clearRect(0, 0, w, h)
     this.ctx.drawImage(image.el, x * rx, y * ry, w * rx, h * ry, 0, 0, w, h)
     stack.forEach(item => item.draw(this.ctx, item.history[0], item)) // action draw
+  }
+
+  onKeyup = (e) => {
+    const { stack } = this.props
+    const keyCode = e.keyCode||e.which||e.charCode
+    const codes = [8, 46]
+    if(!codes.includes(keyCode)) {
+      return;
+    }
+    const {currentSelectIndex} = this.props
+    if(currentSelectIndex !== null) {
+      const lastAction = this.props.action
+      lastAction.beforeUnMount();
+      stack.splice(currentSelectIndex, 1)
+      this.props.setContext({
+        currentSelectIndex: null,
+        // action: null,
+      })
+    }
   }
 
   onMousedown = (e, type) => {
@@ -150,6 +171,9 @@ export default class ScreenshotsViewer extends PureComponent {
       }
     } else {
       const current = this.handlePointInRecord(e)
+      this.props.setContext(() => ({
+        currentSelectIndex: current.index
+      }))
       if (current.type && current.type !== Object.getPrototypeOf(action).constructor.type) {
         // 根据路径更改action
         const Action = actions.find(t => t.key.type === current.type).key

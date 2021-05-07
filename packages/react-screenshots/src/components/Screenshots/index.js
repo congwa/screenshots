@@ -71,7 +71,8 @@ export default class Screenshots extends PureComponent {
     color: '#ee5126',
     cursor: null,
     magnifyPoint: null,
-    editPointers: []
+    editPointers: [],
+    currentSelectIndex: null,
   }
 
   constructor (props) {
@@ -234,7 +235,8 @@ export default class Screenshots extends PureComponent {
       color,
       cursor,
       magnifyPoint,
-      editPointers
+      editPointers,
+      currentSelectIndex
     } = this.state
     const { className, width, height } = this.props
     if (className) classNames.push(className)
@@ -255,6 +257,7 @@ export default class Screenshots extends PureComponent {
           cursor,
           magnifyPoint,
           editPointers,
+          currentSelectIndex,
           setContext: this.setContext
         }}
       >
