@@ -1468,10 +1468,10 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-screenshots@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/react-screenshots/-/react-screenshots-0.0.14.tgz#fce6e05690b52cff18a4a726ea535fd609dc11de"
-  integrity sha512-9Ye0/KFlwRAD0JlJJWG2Bzi2bUqwUYTE4nWcelxmmrbosAaN8DgXfKsi1ESIx9+vUuBYLwiLtYBZ7d+SgZDS+w==
+react-screenshots-mind@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-screenshots-mind/-/react-screenshots-mind-0.0.1.tgz#c94246cf075ba758c369a5ee6c80de8bf1a5a86d"
+  integrity sha512-oXFAB0dMFEm/LukLEALJW7Ocu0kBhdCIcZRxn/4v5lB64p6IW29SoO70Rl9sToJfptGm2SJ/4STnmVBQc6ip/g==
   dependencies:
     core-js "^3.6.5"
     normalize.css "^8.0.1"

@@ -1,5 +1,5 @@
 {
-  "name": "electron-screenshots-mind",
+  "name": "mind-electron-screenshots",
   "version": "0.0.1",
   "description": "electron 截图插件",
   "types": "lib/screenshots.d.ts",

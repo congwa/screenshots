@@ -4,7 +4,7 @@ import Screenshots from './screenshots'
 
 app.on('ready', () => {
   const screenshots = new Screenshots()
-  globalShortcut.register('ctrl+shift+a', () => screenshots.startCapture())
+  globalShortcut.register('shift+a', () => screenshots.startCapture())
   // 点击确定按钮回调事件
   screenshots.on('ok', (e, { viewer }) => {
     console.log('capture', viewer)
