@@ -100,7 +100,7 @@ export default class Screenshots extends Events {
       }
     })
 
-    $win.loadURL(`file://${require.resolve('react-screenshots/dist/index.html')}`)
+    $win.loadURL(`file://${require.resolve('react-screenshots-mind/dist/index.html')}`)
     return $win
   }
 

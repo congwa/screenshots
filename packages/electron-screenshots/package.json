@@ -1,6 +1,6 @@
 {
-  "name": "electron-screenshots",
-  "version": "0.0.14",
+  "name": "electron-screenshots-mind",
+  "version": "0.0.1",
   "description": "electron 截图插件",
   "types": "lib/screenshots.d.ts",
   "main": "lib/screenshots.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nashaofu/screenshots.git"
+    "url": "git+https://github.com/congwa/screenshots.git"
   },
   "keywords": [
     "electron",
@@ -25,17 +25,17 @@
     "capture",
     "plugin"
   ],
-  "author": "nashaofu",
+  "author": "cong_wa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nashaofu/screenshots/issues"
+    "url": "https://github.com/congwa/screenshots.git/issues"
   },
-  "homepage": "https://github.com/nashaofu/screenshots/tree/master/packages/electron-screenshots#readme",
+  "homepage": "https://github.com/congwa/screenshots/tree/master/packages/electron-screenshots#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "react-screenshots": "^0.0.14"
+    "react-screenshots-mind": "^0.0.1"
   },
   "peerDependencies": {
     "electron": ">=6"

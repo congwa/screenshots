@@ -17,7 +17,7 @@ export default (): BoundAndDisplay => {
   const display = process.platform === 'linux' ? workArea : bounds
   // mac图片太大，导致截图窗口卡顿，并且截图窗口显示延迟很严重
   // const scale = process.platform === 'darwin' ? 1 : scaleFactor
-  const scale =  scaleFactor
+  const scale = scaleFactor
 
   return {
     bound: {

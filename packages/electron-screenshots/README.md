@@ -1,6 +1,8 @@
 # electron-screenshots
-
-> electron 截图插件
+> 基于react-screenshots的0.0.14版本修改
+- 0.0.1
+    - 增加delete or backSpace快捷键删除选中的框
+    - 高分辨率截取图片不失真，但是效率较低
 
 ## Install
 

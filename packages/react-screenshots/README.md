@@ -1,4 +1,7 @@
-# react-screenshots
+# react-screenshots-mind
+> 基于react-screenshots的0.0.14版本修改
+- 0.0.1
+    - 增加delete or backSpace快捷键删除选中的框
 
 > a picture clipping and graffiti tool by react
 
